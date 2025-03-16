@@ -64,6 +64,12 @@ public class Organizacion {
 		Telefono = telefono;
 	}
 	
-	
+	public void mostrarInformacion() {
+		System.out.println("Nombre de la organizacion: " + nombre);
+		System.out.println("Numero de personas: " + NumeroPersonas);
+		System.out.println("Correo: " + Correo);
+		System.out.println("Numero de telefono: " + Telefono);
+
+	}
 	
 }

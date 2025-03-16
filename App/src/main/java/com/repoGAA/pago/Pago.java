@@ -73,8 +73,17 @@ public class Pago {
 		this.paypal = paypal;
 	}
 	
-	public void ProcesarPago() {
-		
+	public void ProcesarPago(double monto) {
+		if (Tarjeta != null) {
+			System.out.println("Pago con tarjeta procesado: " + monto);
+		}else if (Efectivo > 0) {
+			System.out.println("Pago en efectivo procesado: " + monto);
+		}else if (Bizum != null) {
+			System.out.println("pago con Bizum procesado: " + monto);
+		}else if (paypal != null) {
+			System.out.println("Pago con paypal procesado: " + monto);
+		}else
+			System.out.println("No se encontro ningun metodo de pago valido.");
 	}
 
 }
